@@ -1,0 +1,21 @@
+CustomerName,CustomerIdType,CustomerIdNo,ApplicationNo,LoanOnItem,LoanAmount,Tenure(months),Zone
+AAA,Passport,A12345,1,Washing Machine,50000,48,North
+BBB,License,B456,2,Fridge,40000,72,South
+CCC,PAN,A12346,3,Car,30000,36,North
+DDD,License,B457,4,Mobile,20000,12,South
+EEE,Passport,A12347,5,TV,10000,18,North
+FFF,Voter Card,B458,6,Fridge,50000,15,South
+GGG,Aadhar,A12348,7,Washing Machine,40000,20,North
+HHH,Aadhar,B459,8,TV,30000,24,South
+III,Aadhar,A12349,9,Music System,20000,48,North
+JJJ,Voter Card,B460,10,Fridge,10000,60,South
+KKK,Passport,A12350,11,Washing Machine,40000,12,East
+LLL,Voter Card,B461,12,TV,20000,6,West
+MMM,Passport,A12351,13,Washing Machine,50000,48,East
+NNN,License,B462,14,Fridge,40000,72,West
+OOO,PAN,A12352,15,Car,30000,36,East
+PPP,License,B463,16,Mobile,20000,12,West
+QQQ,Passport,A12353,17,TV,10000,18,East
+RRR,Voter Card,B464,18,Fridge,50000,15,West
+SSS,Aadhar,A12354,19,Washing Machine,40000,20,East
+TTT,Aadhar,B465,20,TV,30000,24,West

@@ -1,0 +1,15 @@
+com\finance\core\loanprocessor\RoleProcessorTest.class
+com\finance\LoanProcessorTest.class
+com\finance\core\input\WelcomeMenuProcessorTest.class
+com\finance\data\DataMapTest.class
+com\finance\core\input\UserInputCaptureTest.class
+com\finance\model\LoanTest.class
+com\finance\core\loanprocessor\LegalManagerProcessorTest.class
+com\finance\data\CsvDataLoaderTest.class
+com\finance\core\router\LoanApprovalProcessorTest.class
+com\finance\core\router\RoundRobinRecordAssignmentTest.class
+com\finance\core\loanprocessor\UnderwriterProcessorTest.class
+com\finance\core\router\MessageQueueProcessorTest.class
+com\finance\core\router\LeastLoadedUserRecordAssignmentTest.class
+com\finance\core\loanprocessor\RiskManagerProcessorTest.class
+com\finance\core\loanprocessor\FinanceManagerProcessorTest.class
