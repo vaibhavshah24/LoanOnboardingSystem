@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.finance.data.CsvDataLoaderTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.finance.data.CsvDataLoaderTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
@@ -64,5 +64,5 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="com.finance.data.CsvDataLoaderTest" name="verifyNoDataLoadWhenConfigIsFalse" time="0"/>
-  <testcase classname="com.finance.data.CsvDataLoaderTest" name="verifyDataLoadWhenConfigIsTrue" time="0.001"/>
+  <testcase classname="com.finance.data.CsvDataLoaderTest" name="verifyDataLoadWhenConfigIsTrue" time="0.011"/>
 </testsuite>

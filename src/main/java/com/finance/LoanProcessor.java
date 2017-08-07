@@ -58,6 +58,6 @@ public class LoanProcessor implements CommandLineRunner {
         };
 
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
-        executor.scheduleAtFixedRate(periodicTask, 0, 10, TimeUnit.SECONDS);
+        executor.scheduleAtFixedRate(periodicTask, 30, 30, TimeUnit.SECONDS);
     }
 }
