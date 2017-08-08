@@ -4,7 +4,7 @@
 This program implements the loan approval workflow. Each loan needs to pass through following levels of approvals respectively: Underwriter, Risk Manager, Legal Manager. All 3 can approve or reject the loan. If approved from one level, the loan goes to next approval level. If rejected, the loan does not go for any other approval. Both Risk Manager and Legal Manager can send the loan back to previous level for further clarification. Once approved from all three levels, the Finance Manager needs to disburse the loan.
 
 ## Technologies:
-Spring-boot, Spring data JPA, MongoDB, ActiveMQ (using out-of-box spring-jms jar.)
+Spring Boot, Spring Data JPA, MongoDB, ActiveMQ (using out-of-box spring-jms jar.)
 
 ## Function:
 - At the start of program, few 'User' and 'Loan' records are loaded into the MongoDB from the CSV files which are present in the project. (This is sample data, which in real time scenario would come from the staging database or flat files or 3rd party APIs.)
