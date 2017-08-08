@@ -5,9 +5,7 @@ import com.finance.model.Loan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import static com.finance.enums.ApprovalStatus.APPROVED_BY_RISK_MANAGER;
-import static com.finance.enums.ApprovalStatus.CLARIFICATION_REQUESTED_BY_RISK_MANAGER;
-import static com.finance.enums.ApprovalStatus.REJECTED_BY_RISK_MANAGER;
+import static com.finance.enums.ApprovalStatus.*;
 import static com.finance.enums.UserRole.RISK_MANAGER;
 
 @Component

@@ -1,7 +1,7 @@
 package com.finance;
 
-import com.finance.core.router.RecordAssignment;
 import com.finance.core.input.UserInputCapture;
+import com.finance.core.router.RecordAssignment;
 import com.finance.data.DataLoader;
 import com.finance.data.DataMap;
 import org.junit.Test;

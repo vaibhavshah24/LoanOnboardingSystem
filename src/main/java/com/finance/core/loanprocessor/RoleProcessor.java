@@ -11,11 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 import static com.finance.data.DataMap.MENU_ITEMS;
-import static com.finance.data.DataMap.*;
+import static com.finance.data.DataMap.USER_ROLE_MENU_MAPPING;
 
 @Component
 public class RoleProcessor {
@@ -59,21 +58,18 @@ public class RoleProcessor {
     private void displayLoans(String userId, UserRole userRole, LoanAction roleProcessor) {
         List<Loan> loanList = loanRepository.findByAssignee(userId);
         if (!loanList.isEmpty()) {
-            //for (int loanCounter = 0; loanCounter< loanList.size(); loanCounter++) {
-                System.out.println("You have " + loanList.size() + " loan requests to process. Here is the first loan information: ");
-                Loan loan = loanList.get(0); // display the first loan
-                //Loan loan = loanList.get(loanCounter); // display the first loan
-                loan.removeListeners();
-                loan.attachListener(loanUpdateListener);
-                System.out.println(loan.toString()); // display loan information
-                userInputCapture.displayMenu(USER_ROLE_MENU_MAPPING.get(userRole));
-                String selectedOption = null;
-                do {
-                    selectedOption = userInputCapture.getUserInput();
-                }
-                while (!userInputCapture.validateMenuSelection(MENU_ITEMS.get(USER_ROLE_MENU_MAPPING.get(userRole)), selectedOption));
-                roleProcessor.performCoreAction(userId, loan, selectedOption);
-            //}
+            System.out.println("You have " + loanList.size() + " loan requests to process. Here is the first loan information: ");
+            Loan loan = loanList.get(0); // display the first loan
+            loan.removeListeners();
+            loan.attachListener(loanUpdateListener);
+            System.out.println(loan.toString()); // display loan information
+            userInputCapture.displayMenu(USER_ROLE_MENU_MAPPING.get(userRole));
+            String selectedOption = null;
+            do {
+                selectedOption = userInputCapture.getUserInput();
+            }
+            while (!userInputCapture.validateMenuSelection(MENU_ITEMS.get(USER_ROLE_MENU_MAPPING.get(userRole)), selectedOption));
+            roleProcessor.performCoreAction(userId, loan, selectedOption);
         } else {
             System.out.println("Yayy! No pending loan requests to process.");
             userInputCapture.goToMainMenu();

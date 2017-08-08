@@ -1,10 +1,6 @@
 package com.finance.core.loanprocessor;
 
 import com.finance.core.input.UserInputCapture;
-import com.finance.data.CsvDataLoader;
-import com.finance.data.DataMap;
-import com.finance.enums.UserRole;
-import com.finance.enums.Zone;
 import com.finance.model.Customer;
 import com.finance.model.Loan;
 import com.finance.model.User;
@@ -17,7 +13,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.springframework.test.util.ReflectionTestUtils;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -47,7 +42,6 @@ public class RoleProcessorTest {
     @Mock
     private UnderwriterProcessor underwriterProcessor;
 
-    //private static List<User> userList = new ArrayList<>();
     private static List<Loan> loanList = new ArrayList<>();
 
     @BeforeClass
@@ -57,17 +51,6 @@ public class RoleProcessorTest {
         Loan loan2 = new Loan(new Customer("Jay", "PAN", "XYZ"), "1", "TV", new BigDecimal("100"), 36,NORTH);
         loanList.add(loan1);
         loanList.add(loan2);
-
-        /*User user1 = new User("1", "A", "A", NORTH, UNDERWRITER, "UserA");
-        User user2 = new User("2", "B", "B", NORTH, UNDERWRITER, "UserB");
-        User user3 = new User("3", "C", "C", NORTH, UNDERWRITER, "UserC");*/
-
-        /*user1.addLoan(loan1);
-        user1.addLoan(loan2);*/
-
-        /*userList.add(user1);
-        userList.add(user2);
-        userList.add(user3);*/
     }
 
     @Test

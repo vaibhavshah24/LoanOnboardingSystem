@@ -2,10 +2,7 @@ package com.finance.model;
 
 import com.finance.core.router.LoanApprovalProcessor;
 import com.finance.core.router.LoanUpdateListener;
-import com.finance.enums.ApprovalStatus;
-import com.finance.enums.Zone;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -15,10 +12,9 @@ import org.mockito.runners.MockitoJUnitRunner;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import static com.finance.enums.ApprovalStatus.APPROVED_BY_UNDERWRITER;
 import static com.finance.enums.ApprovalStatus.PENDING;
 import static com.finance.enums.Zone.NORTH;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LoanTest {

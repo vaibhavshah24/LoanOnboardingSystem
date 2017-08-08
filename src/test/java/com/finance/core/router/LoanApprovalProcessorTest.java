@@ -1,12 +1,7 @@
 package com.finance.core.router;
 
-import com.finance.core.router.LoanApprovalProcessor;
-import com.finance.data.DataMap;
-import com.finance.enums.ApprovalStatus;
-import com.finance.enums.Zone;
 import com.finance.model.Customer;
 import com.finance.model.Loan;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;

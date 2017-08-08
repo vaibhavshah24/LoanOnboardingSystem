@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="com.finance.core.router.LoanApprovalProcessorTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="com.finance.core.router.LoanApprovalProcessorTest" time="0.004" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
@@ -64,13 +64,13 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldSendMessageToUnderwriterQueueAfterRiskManagerClarificationRequest" time="0"/>
-  <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldSendMessageToUnderwriterQueueForNewRecord" time="0"/>
+  <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldSendMessageToUnderwriterQueueForNewRecord" time="0.001"/>
   <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldNotSendMessageToJmsQueueAfterUnderwriterRejects" time="0"/>
   <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldSendMessageToFinanceManagerQueueAfterLegalManagerApproval" time="0"/>
-  <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldNotSendMessageToJmsQueueAfterRiskManagerRejects" time="0"/>
+  <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldNotSendMessageToJmsQueueAfterRiskManagerRejects" time="0.001"/>
   <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldSendMessageToRiskManagerQueueAfterUnderwriterApproval" time="0"/>
-  <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldNotSendMessageToJmsQueueAfterLegalManagerRejects" time="0"/>
+  <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldNotSendMessageToJmsQueueAfterLegalManagerRejects" time="0.002"/>
   <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldSendMessageToRiskManagerQueueAfterLegalManagerClarificationRequest" time="0"/>
   <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldNotSendMessageToJmsQueueAfterFinanceManagerDisbursesLoan" time="0"/>
-  <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldSendMessageToLegalManagerQueueAfterRiskManagerApproval" time="0.001"/>
+  <testcase classname="com.finance.core.router.LoanApprovalProcessorTest" name="shouldSendMessageToLegalManagerQueueAfterRiskManagerApproval" time="0"/>
 </testsuite>

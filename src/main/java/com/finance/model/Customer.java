@@ -2,7 +2,6 @@ package com.finance.model;
 
 public class Customer {
 
-    private String customerId;
     private String name;
     private String idType;
     private String idNumber;

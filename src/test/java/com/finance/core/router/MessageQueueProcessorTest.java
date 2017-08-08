@@ -1,7 +1,5 @@
 package com.finance.core.router;
 
-import com.finance.core.router.MessageQueueProcessor;
-import com.finance.core.router.RecordAssignment;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

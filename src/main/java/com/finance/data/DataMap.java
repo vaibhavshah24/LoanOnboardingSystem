@@ -3,15 +3,9 @@ package com.finance.data;
 import com.finance.enums.ApprovalStatus;
 import com.finance.enums.MenuType;
 import com.finance.enums.UserRole;
-import com.finance.model.Loan;
-import com.finance.model.User;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.finance.enums.ApprovalStatus.*;
 import static com.finance.enums.MenuType.*;

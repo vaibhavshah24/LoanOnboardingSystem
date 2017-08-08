@@ -12,14 +12,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
-import org.springframework.util.FileCopyUtils;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
-import java.nio.charset.StandardCharsets;
 
 @Component()
 public class CsvDataLoader implements DataLoader {
@@ -58,20 +55,20 @@ public class CsvDataLoader implements DataLoader {
 
         userRepository.deleteAll(); // delete existing data from database before loading new data.
 
-        BufferedReader br = null;
+        BufferedReader bufferedReader = null;
         String line = "";
         String cvsSplitBy = ",";
 
         try {
             Resource resource = new ClassPathResource(userFilePath);
-            br = new BufferedReader(new InputStreamReader(resource.getInputStream()));
-            if (br.readLine() == null) { // this will read the header of the CSV file
+            bufferedReader = new BufferedReader(new InputStreamReader(resource.getInputStream()));
+            if (bufferedReader.readLine() == null) { // this will read the header of the CSV file
                 System.out.println("Users file is empty. Please provide a valid file.");
                 System.exit(1); // exit from application since there is no user data to process.
             }
 
             User userRecord = null;
-            while ((line = br.readLine()) != null) {
+            while ((line = bufferedReader.readLine()) != null) {
                 String[] userInfo = line.split(cvsSplitBy);
                 userRecord = new User(userInfo[0], userInfo[1], userInfo[2], Zone.valueOf(userInfo[3].toUpperCase()), UserRole.valueOf(userInfo[4].toUpperCase()), userInfo[5]);
                 userRepository.save(userRecord);
@@ -80,9 +77,9 @@ public class CsvDataLoader implements DataLoader {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (br != null) {
+            if (bufferedReader != null) {
                 try {
-                    br.close();
+                    bufferedReader.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -96,21 +93,21 @@ public class CsvDataLoader implements DataLoader {
 
         loanRepository.deleteAll(); // delete existing data from database before loading new data.
 
-        BufferedReader br = null;
+        BufferedReader bufferedReader = null;
         String line = "";
         String cvsSplitBy = ",";
 
         try {
             Resource resource = new ClassPathResource(loanFilePath);
-            br = new BufferedReader(new InputStreamReader(resource.getInputStream()));
-            if (br.readLine() == null) { // this will read the header of the CSV file
+            bufferedReader = new BufferedReader(new InputStreamReader(resource.getInputStream()));
+            if (bufferedReader.readLine() == null) { // this will read the header of the CSV file
                 System.out.println("Loans file is empty. Please provide a valid file.");
                 System.exit(1); // exit from application since there is no loan data to process.
             }
 
             Loan loanRecord = null;
             Customer customer = null;
-            while ((line = br.readLine()) != null) {
+            while ((line = bufferedReader.readLine()) != null) {
                 String[] loanInfo = line.split(cvsSplitBy);
                 customer = new Customer(loanInfo[0], loanInfo[1], loanInfo[2]);
                 loanRecord = new Loan(customer, loanInfo[3], loanInfo[4], new BigDecimal(loanInfo[5]), Integer.parseInt(loanInfo[6]), Zone.valueOf(loanInfo[7].toUpperCase()));
@@ -120,9 +117,9 @@ public class CsvDataLoader implements DataLoader {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (br != null) {
+            if (bufferedReader != null) {
                 try {
-                    br.close();
+                    bufferedReader.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

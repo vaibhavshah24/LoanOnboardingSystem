@@ -16,11 +16,6 @@ public class Loan {
 
     @Id
     private String applicationNo;
-
-    public String getApplicationNo() {
-        return applicationNo;
-    }
-
     private Customer customer;
     private String item;
     private BigDecimal amount;
@@ -42,6 +37,8 @@ public class Loan {
         this.approvalStatus = NEW; // default approval status is new when the loan record is created in DB.
         this.createdOn = LocalDateTime.now();
     }
+
+    public String getApplicationNo() { return applicationNo; }
 
     public Customer getCustomer() {
         return customer;

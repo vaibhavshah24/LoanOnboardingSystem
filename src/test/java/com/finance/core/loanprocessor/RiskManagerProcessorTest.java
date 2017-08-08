@@ -1,7 +1,6 @@
 package com.finance.core.loanprocessor;
 
 import com.finance.core.input.UserInputCapture;
-import com.finance.enums.Zone;
 import com.finance.model.Customer;
 import com.finance.model.Loan;
 import com.finance.respository.LoanRepository;
@@ -16,9 +15,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 
-import static com.finance.enums.ApprovalStatus.APPROVED_BY_RISK_MANAGER;
-import static com.finance.enums.ApprovalStatus.CLARIFICATION_REQUESTED_BY_RISK_MANAGER;
-import static com.finance.enums.ApprovalStatus.REJECTED_BY_RISK_MANAGER;
+import static com.finance.enums.ApprovalStatus.*;
 import static com.finance.enums.Zone.NORTH;
 
 @RunWith(MockitoJUnitRunner.class)

@@ -5,7 +5,7 @@ import com.finance.model.Loan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import static com.finance.enums.ApprovalStatus.*;
+import static com.finance.enums.ApprovalStatus.DISBURSED;
 import static com.finance.enums.UserRole.LEGAL_MANAGER;
 
 @Component

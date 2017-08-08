@@ -1,19 +1,18 @@
 package com.finance;
 
-import com.finance.core.router.RecordAssignment;
 import com.finance.core.input.UserInputCapture;
+import com.finance.core.router.RecordAssignment;
 import com.finance.data.DataLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.time.LocalDateTime;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import static com.finance.data.DataMap.*;
+import static com.finance.data.DataMap.prepareDataMap;
 
 @SpringBootApplication
 public class LoanProcessor implements CommandLineRunner {
@@ -53,7 +52,7 @@ public class LoanProcessor implements CommandLineRunner {
     private void monitorIdleRecords()
     {
         Runnable periodicTask = () -> {
-            System.out.println("Reassignment thread called. Time : " + LocalDateTime.now());
+            //System.out.println("Reassignment thread called. Time : " + LocalDateTime.now());
             recordAssignment.reassignIdleLoansInQueue();
         };
 

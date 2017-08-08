@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import static com.finance.data.DataMap.MENU_ITEMS;
-import static com.finance.enums.MenuType.*;
+import static com.finance.enums.MenuType.WELCOME_MENU;
 
 @Component
 public class UserInputCapture {
@@ -17,7 +17,7 @@ public class UserInputCapture {
     @Autowired
     private WelcomeMenuProcessor welcomeMenuProcessor;
 
-    private static BufferedReader br = null;
+    private static BufferedReader bufferedReader = null;
 
     public void displayMenu(MenuType menuType) {
         for (String menuOption : MENU_ITEMS.get(menuType))
@@ -37,8 +37,8 @@ public class UserInputCapture {
     public String getUserInput() {
         String input = null;
         try {
-            br = new BufferedReader(new InputStreamReader(System.in));
-            input = br.readLine();
+            bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            input = bufferedReader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -46,9 +46,9 @@ public class UserInputCapture {
     }
 
     public void cleanUpAndExit() {
-        if (br != null) {
+        if (bufferedReader != null) {
             try {
-                br.close();
+                bufferedReader.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

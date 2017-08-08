@@ -1,7 +1,6 @@
 package com.finance.core.loanprocessor;
 
 import com.finance.core.input.UserInputCapture;
-import com.finance.enums.Zone;
 import com.finance.model.Customer;
 import com.finance.model.Loan;
 import com.finance.respository.LoanRepository;
@@ -16,9 +15,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 
-import static com.finance.enums.ApprovalStatus.APPROVED_BY_LEGAL_MANAGER;
-import static com.finance.enums.ApprovalStatus.CLARIFICATION_REQUESTED_BY_LEGAL_MANAGER;
-import static com.finance.enums.ApprovalStatus.REJECTED_BY_LEGAL_MANAGER;
+import static com.finance.enums.ApprovalStatus.*;
 import static com.finance.enums.Zone.NORTH;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -42,10 +39,6 @@ public class LegalManagerProcessorTest {
 
     @Test
     public void shouldApproveLoan() throws Exception {
-        //Mockito.doNothing().when(userInputCapture).displayMenu(LEGAL_MANAGER_MENU);
-        //Mockito.when(userInputCapture.getUserInput()).thenReturn("1");
-        //Mockito.when(userInputCapture.validateMenuSelection(MENU_ITEMS.get(LEGAL_MANAGER_MENU), "1")).thenReturn(false);
-        //Mockito.doNothing().when(roleProcessor).updateLoanAndDisplayPendingLoans(loan, "1", LEGAL_MANAGER, riskManagerProcessor);
         legalManagerProcessor.performCoreAction("1", loan, "1");
         Assert.assertEquals(loan.getApprovalStatus(), APPROVED_BY_LEGAL_MANAGER);
     }

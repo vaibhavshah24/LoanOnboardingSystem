@@ -39,7 +39,7 @@ public class LeastLoadedUserRecordAssignment implements RecordAssignment {
     private LoanUpdateListener loanUpdateListener;
 
     @Autowired
-    MongoTemplate mongoTemplate;
+    private MongoTemplate mongoTemplate;
 
     @Override
     public void assignRecords() {

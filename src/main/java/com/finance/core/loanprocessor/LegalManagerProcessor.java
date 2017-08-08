@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import static com.finance.enums.ApprovalStatus.*;
 import static com.finance.enums.UserRole.LEGAL_MANAGER;
-import static com.finance.enums.UserRole.RISK_MANAGER;
 
 @Component
 public class LegalManagerProcessor extends RoleProcessor implements LoanAction {
